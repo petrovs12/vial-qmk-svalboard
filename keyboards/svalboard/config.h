@@ -48,7 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define POSTWAIT_US 90
 
 #define SERIAL_DEBUG
-#define SERIAL_USART_TX_PIN GP0 
+#define SERIAL_USART_TX_PIN GP0
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500 // Timeout window in ms in which the double tap can occur.
 #define FORCE_NKRO
@@ -63,9 +63,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #define PS2_DATA_PIN GP23
   #define PS2_MOUSE_SCROLL_DIVISOR_H 4
   #define PS2_MOUSE_SCROLL_DIVISOR_V 4
-  #define PS2_MOUSE_ROTATE 270 
+  #define PS2_MOUSE_ROTATE 270
   #define PS2_MOUSE_SCROLL_BTN_MASK 0  // just normal middle button for panning and relative scroll
-  //#define PS2_MOUSE_SCROLL_BTN_MASK (1<<PS2_MOUSE_BTN_MIDDLE) /* Default -- tap to enter relative scroll, hold to use direct scroll*/ 
+  //#define PS2_MOUSE_SCROLL_BTN_MASK (1<<PS2_MOUSE_BTN_MIDDLE) /* Default -- tap to enter relative scroll, hold to use direct scroll*/
 #endif
 
 //@manna-harbour's automousekeys
@@ -82,5 +82,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VIAL_COMBO_ENTRIES 100
 #define VIAL_KEY_OVERRIDE_ENTRIES 10
 #define DYNAMIC_KEYMAP_MACRO_COUNT 100
-
-

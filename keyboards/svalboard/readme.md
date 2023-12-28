@@ -25,7 +25,7 @@ qmk flash --keyboard svalboard --keymap default -bl uf2-split-left
 qmk flash --keyboard svalboard --keymap default -bl uf2-split-right
 ```
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+See the [build environment setup](https://docs.qmk.fm#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
 ## Bootloader
 Errata -- you need to hold BOOT while plugging in USB to enter bootloader mode, because early units have a schematic gaffe on the reset button.
