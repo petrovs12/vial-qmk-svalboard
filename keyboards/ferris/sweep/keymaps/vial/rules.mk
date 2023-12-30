@@ -1,5 +1,19 @@
-VIA_ENABLE = yes
+VIA_ENABLE = no
 VIAL_ENABLE = yes
 LTO_ENABLE = yes
-QMK_SETTINGS = no
+QMK_SETTINGS = yes
+# EXTRAFLAGS += -flto
+
+
+RGBLIGHT_ENABLE     = no
+RGB_MATRIX_ENABLE   = no # Can't have RGBLIGHT and RGB_MATRIX at the same time.
+MOUSEKEY_ENABLE     = no
+OLED_ENABLE         = no
+OLED_DRIVER         = SSD1306
+
+COMBO_ENABLE        = no
+CONSOLE_ENABLE = no
+NKRO_ENABLE = yes
+SPLIT_KEYBOARD = yes
+KEY_LOCK_ENABLE = yes
 

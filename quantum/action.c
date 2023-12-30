@@ -841,7 +841,9 @@ if (QS_oneshot_tap_toggle > 1) {
 #        endif
                     retro_tapping_counter == 2) {
 #        if defined(AUTO_SHIFT_ENABLE) && defined(RETRO_SHIFT)
-                    process_auto_shift(action.layer_tap.code, record);
+                    // process_auto_shift(action.layer_tap.code, record);
+                    tap_code16(S(action.layer_tap.code));
+
 #        else
                     tap_code(action.layer_tap.code);
 #        endif
