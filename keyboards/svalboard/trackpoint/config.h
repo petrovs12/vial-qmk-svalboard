@@ -26,7 +26,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define FORCE_NKRO
 //#define DEBUG_MATRIX_SCAN_RATE
 //#define PS2_MOUSE_ENABLE // see info.json for duplicate...
-#define EE_HANDS
+// #define EE_HANDS
+// #define MASTER_RIGHT
+// #define RETRO_SHIFT 360
+
 
 // wiring of each half
 //Layout for svalboard v0 (different from lalboard_v2)
@@ -82,6 +85,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VIAL_COMBO_ENTRIES 100
 #define VIAL_KEY_OVERRIDE_ENTRIES 10
 #define DYNAMIC_KEYMAP_MACRO_COUNT 100
-#define
 
 
