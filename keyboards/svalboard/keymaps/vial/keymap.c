@@ -53,7 +53,7 @@ enum layer {
 const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
  [NORMAL] = LAYOUT(
              /*Center           North           East            South           West*/
-        
+
         /*R1*/ KC_J,            KC_U,           KC_QUOTE,       KC_M,           KC_H,
         /*R2*/ KC_K,            KC_I,           KC_COLON,       KC_COMMA,       KC_Y,
         /*R3*/ KC_L,            KC_O,           KC_LGUI,        KC_DOT,         KC_N,
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*L3*/ KC_S,            KC_W,           KC_B,           KC_X,           KC_ESC,
         /*L4*/ KC_A,            KC_Q,           KC_LBRC,        KC_Z,           KC_DEL,
 
-        /*Down                  Inner (pad)     Upper (Mode)    O.Upper (nail)  OL (knuckle) Pushthrough*/  
+        /*Down                  Inner (pad)     Upper (Mode)    O.Upper (nail)  OL (knuckle) Pushthrough*/
         /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,        KC_LALT,     TG(NAS),
         /*LT*/ KC_LSFT,         KC_ENTER,       TO(NORMAL),          KC_TAB,         KC_LCTL,     KC_CAPS
     ),
@@ -98,9 +98,15 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*L3*/ KC_2,            KC_AT,          XXXXXXX,        KC_X,           KC_ESC,
         /*L4*/ KC_1,            KC_EXCLAIM,     KC_TILDE,       KC_EQUAL,       KC_DEL,
 
+<<<<<<< HEAD
         /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/  
         /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,        KC_LALT, _______,
         /*LT*/ KC_LSFT,         KC_ENTER,       _______,        KC_TAB,         KC_LCTL, _______
+=======
+        /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/
+        /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,      KC_LALT, _______,
+        /*LT*/ KC_LSFT,       KC_ENTER,       KC_NORMAL_HOLD, KC_TAB,         KC_LCTL, _______
+>>>>>>> ee_hands
     ),
 
     [FUNC] = LAYOUT(
@@ -115,7 +121,7 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*L3*/ XXXXXXX,         KC_F4,          XXXXXXX,        KC_F3,          KC_ESC,
         /*L4*/ XXXXXXX,         KC_F2,          XXXXXXX,        KC_F1,          KC_DEL,
 
-             /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/  
+             /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/
         /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,      KC_LALT, _______,
         /*LT*/ KC_LSFT,       KC_ENTER,         _______, KC_TAB,         KC_LCTL,_______
     ),
@@ -132,11 +138,11 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*L3*/ XXXXXXX,         XXXXXXX,        XXXXXXX,        XXXXXXX,     XXXXXXX,
         /*L4*/ _______,      _______,        _______,        _______,       _______,
 
-             /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/  
+             /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/
         /*RT*/ _______,         _______,        _______,        _______,        _______,_______,
         /*LT*/ _______,         _______,        _______,        _______,        _______, _______
     ),
-    
+
     [MBO] = LAYOUT(
              /*Center           North           East            South           West*/
         /*R1*/ KC_TRNS,        KC_TRNS,       KC_TRNS,       KC_BTN1,       KC_TRNS,
@@ -167,7 +173,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       // If console is enabled, it will print the matrix position and status of each key pressed
 #ifdef CONSOLE_ENABLE
     uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
-#endif 
+#endif
 
 #if defined MH_AUTO_BUTTONS && defined PS2_MOUSE_ENABLE && defined MOUSEKEY_ENABLE
     if (mh_auto_buttons_timer) {

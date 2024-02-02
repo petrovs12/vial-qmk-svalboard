@@ -7,3 +7,6 @@
 #define VIAL_UNLOCK_COMBO_ROWS { 2, 3, 0, 0, 0 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 1, 0, 2, 4 }
 
+#define RETRO_SHIFT 360
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
