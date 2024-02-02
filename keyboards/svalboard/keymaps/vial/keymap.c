@@ -33,6 +33,7 @@ void pointing_device_init_user(void) {
     set_auto_mouse_layer(5); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
 }
+#define AUTO_MOUSE_THRESHOLD 7
 #endif
 
 enum my_keycodes {
@@ -98,15 +99,9 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*L3*/ KC_2,            KC_AT,          XXXXXXX,        KC_X,           KC_ESC,
         /*L4*/ KC_1,            KC_EXCLAIM,     KC_TILDE,       KC_EQUAL,       KC_DEL,
 
-<<<<<<< HEAD
-        /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/  
-        /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,        KC_LALT, _______,
-        /*LT*/ KC_LSFT,         KC_ENTER,       _______,        KC_TAB,         KC_LCTL, _______
-=======
         /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/
         /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,      KC_LALT, _______,
         /*LT*/ KC_LSFT,       KC_ENTER,       KC_NORMAL_HOLD, KC_TAB,         KC_LCTL, _______
->>>>>>> ee_hands
     ),
 
     [FUNC] = LAYOUT(
@@ -202,7 +197,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       */
-      
+
 /*     case KC_FUNC_HOLD:
       if (record->event.pressed) {
           layer_clear();
@@ -247,7 +242,7 @@ void mouse_mode(bool on) {
     layer_on(MH_AUTO_BUTTONS_LAYER);
     mh_auto_buttons_timer = timer_read();
   } else {
-    layer_off(MH_AUTO_BUTTONS_LAYER);
+     layer_off(MH_AUTO_BUTTONS_LAYER);
     mh_auto_buttons_timer = 0;
   }
 }
