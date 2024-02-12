@@ -30,5 +30,23 @@ void ps2_mouse_init_user() {
   PS2_MOUSE_SEND(0x60, "tfups: 0x60");
   PS2_MOUSE_SEND(0xf0, "tfups: 0xf0");
   */
+  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  PS2_MOUSE_SEND(0x47, "pts: 0x47");
+  PS2_MOUSE_SEND(0x2C, "pts: 0x2C");
+  PS2_MOUSE_SEND(0x01, "pts: 0x00");  // 01 turns on Z tap, 00 turns off
+
+
+
+  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  PS2_MOUSE_SEND(0x81, "pts: 0x81");
+  PS2_MOUSE_SEND(0x63, "pts: 0x63");
+  PS2_MOUSE_SEND(0x80, "pts: 0x40");  // 0xFE is default threshold of 1  try lower and see what happens
+
+
+
+  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  PS2_MOUSE_SEND(0x81, "pts: 0x81");
+  PS2_MOUSE_SEND(0x63, "pts: 0x64");
+  PS2_MOUSE_SEND(0x80, "pts: 0x40");  // 0xFE is default threshold of 1  try lower and see what happens
 }
 #endif

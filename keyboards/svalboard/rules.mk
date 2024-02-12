@@ -37,5 +37,6 @@ ifeq ($(strip $(MH_AUTO_BUTTONS)), yes)
   OPT_DEFS += -DMH_AUTO_BUTTONS
 endif
 
+VIA_ENABLE = yes
 
 
